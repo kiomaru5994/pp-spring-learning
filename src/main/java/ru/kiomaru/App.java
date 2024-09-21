@@ -12,12 +12,12 @@ public class App {
         bean.setMessage("Hello World");
         HelloWorld bean2 = (HelloWorld) applicationContext.getBean("helloworld");
         bean2.setMessage("Hello World2");
-        Cat cat = applicationContext.getBean(Cat.class);
+
+        Cat cat = (Cat) applicationContext.getBean("cat");
         cat.setName("Артемка");
-        cat.setAge(6);
-        Cat cat2 = applicationContext.getBean(Cat.class);
+        Cat cat2 = (Cat) applicationContext.getBean("cat2");
         cat2.setName("Бобик");
-        cat2.setAge(12);
+
         if (bean == bean2) {
             System.out.println("Бины HelloWorld имеют одну ссылку.");
         } else {

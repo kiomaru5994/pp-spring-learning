@@ -1,11 +1,9 @@
 package ru.kiomaru;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "ru.kiomaru")
 public class AppConfig {
  
     @Bean(name="helloworld")
@@ -13,5 +11,15 @@ public class AppConfig {
         HelloWorld helloWorld = new HelloWorld();
         helloWorld.setMessage("Hello World!");
         return helloWorld;
+    }
+
+    @Bean(name = "cat")
+    public Cat getCat() {
+        return new Cat();
+    }
+
+    @Bean(name = "cat2")
+    public Cat getCat2() {
+        return new Cat();
     }
 }
