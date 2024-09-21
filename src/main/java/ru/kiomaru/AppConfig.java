@@ -2,6 +2,7 @@ package ru.kiomaru;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
@@ -13,13 +14,9 @@ public class AppConfig {
         return helloWorld;
     }
 
+    @Scope("prototype")
     @Bean(name = "cat")
     public Cat getCat() {
-        return new Cat();
-    }
-
-    @Bean(name = "cat2")
-    public Cat getCat2() {
         return new Cat();
     }
 }

@@ -15,7 +15,7 @@ public class App {
 
         Cat cat = (Cat) applicationContext.getBean("cat");
         cat.setName("Артемка");
-        Cat cat2 = (Cat) applicationContext.getBean("cat2");
+        Cat cat2 = (Cat) applicationContext.getBean("cat");
         cat2.setName("Бобик");
 
         if (bean == bean2) {
